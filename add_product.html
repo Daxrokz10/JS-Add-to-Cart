@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Add Products</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./add_product.html">Add Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./cart.html">Cart</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <div class="card-body p-5">
+                            <h2 class="mb-4 text-center text-primary fw-bold">Add New Product</h2>
+                            <form id="form" autocomplete="off">
+                                <div class="mb-3">
+                                    <label for="pname" class="form-label fw-semibold">Product Name</label>
+                                    <input type="text" name="pname" id="pname" class="form-control form-control-lg"
+                                        placeholder="Enter product name" required />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="price" class="form-label fw-semibold">Price</label>
+                                    <input type="number" name="price" id="price" class="form-control form-control-lg"
+                                        placeholder="Enter price" min="1" required />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="stock" class="form-label fw-semibold">Stock</label>
+                                    <input type="number" name="stock" id="stock" class="form-control form-control-lg"
+                                        placeholder="Enter stock quantity" min="0" required />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="type" class="form-label fw-semibold">Type</label>
+                                    <select name="type" id="type" class="form-select form-select-lg" required>
+                                        <option value="" disabled selected>Select Type</option>
+                                        <option value="Appliances">Appliances</option>
+                                        <option value="Foods & Bevarges">Foods & Bevarges</option>
+                                        <option value="Clothing">Clothing</option>
+                                        <option value="Electronics">Electronics</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="pimage" class="form-label fw-semibold">Product Image URL</label>
+                                    <input type="url" name="pimage" id="pimage" class="form-control form-control-lg"
+                                        placeholder="Paste image URL" required />
+                                </div>
+                                <div class="d-grid">
+                                    <button class="btn btn-primary btn-lg addBtn" type="submit"
+                                        style="background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%); border: none;">
+                                        <i class="bi bi-plus-circle me-2"></i>Add Product
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script src="./js/prodform.js"></script>
+</body>
+
+</html>
