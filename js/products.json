@@ -1,0 +1,95 @@
+[
+  {
+    "id": 1,
+    "name": "Fresh Bananas",
+    "category": "Fruits",
+    "price": 18.00,
+    "unit": "1 Bunch",
+    "rating": 4.5,
+    "discount": "30%",
+    "image": "images/banana.png"
+  },
+  {
+    "id": 2,
+    "name": "Candy Crackers",
+    "category": "Snacks",
+    "price": 10.00,
+    "unit": "1 Box",
+    "rating": 4.5,
+    "discount": "30%",
+    "image": "images/candy_box.png"
+  },
+  {
+    "id": 3,
+    "name": "Fresh Cucumbers",
+    "category": "Vegetables",
+    "price": 12.00,
+    "unit": "1 kg",
+    "rating": 4.5,
+    "image": "images/cucumber.png"
+  },
+  {
+    "id": 4,
+    "name": "Organic Milk",
+    "category": "Dairy",
+    "price": 22.00,
+    "unit": "2 Liters",
+    "rating": 4.5,
+    "image": "images/milk.png"
+  },
+  {
+    "id": 5,
+    "name": "Sunstar Melon Juice",
+    "category": "Juices",
+    "price": 15.00,
+    "unit": "1 Bottle",
+    "rating": 4.5,
+    "image": "images/melon-juice.png"
+  },
+  {
+    "id": 6,
+    "name": "Tomatoes",
+    "category": "Vegetables",
+    "price": 7.00,
+    "unit": "1 kg",
+    "rating": 4.4,
+    "image": "images/tomato.png"
+  },
+  {
+    "id": 7,
+    "name": "Brown Bread",
+    "category": "Bakery",
+    "price": 9.00,
+    "unit": "1 Pack",
+    "rating": 4.3,
+    "image": "images/bread.png"
+  },
+  {
+    "id": 8,
+    "name": "Eggs - Free Range",
+    "category": "Dairy",
+    "price": 30.00,
+    "unit": "12 pcs",
+    "rating": 4.6,
+    "image": "images/eggs.png"
+  },
+  {
+    "id": 9,
+    "name": "Orange Juice",
+    "category": "Juices",
+    "price": 20.00,
+    "unit": "1 Bottle",
+    "rating": 4.5,
+    "discount": "10%",
+    "image": "images/orange-juice.png"
+  },
+  {
+    "id": 10,
+    "name": "Potato Chips",
+    "category": "Snacks",
+    "price": 25.00,
+    "unit": "1 Pack",
+    "rating": 4.2,
+    "image": "images/potato_chips.png"
+  }
+]
