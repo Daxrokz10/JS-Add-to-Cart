@@ -17,7 +17,7 @@
     "unit": "1 Box",
     "rating": 4.5,
     "discount": "30%",
-    "image": "images/candy_box.png"
+    "image": "images/candy.jpg"
   },
   {
     "id": 3,
@@ -71,7 +71,7 @@
     "price": 30.00,
     "unit": "12 pcs",
     "rating": 4.6,
-    "image": "images/eggs.png"
+    "image": "images/eggs.webp"
   },
   {
     "id": 9,
@@ -90,6 +90,6 @@
     "price": 25.00,
     "unit": "1 Pack",
     "rating": 4.2,
-    "image": "images/potato_chips.png"
+    "image": "images/chips.png"
   }
 ]
