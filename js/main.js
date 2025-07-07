@@ -2,6 +2,9 @@ let products = [];
 let cart = [];
 let product_grid = document.querySelector('.tab-content .product-grid')
 let cartSection = document.querySelector('.offcanvas .offcanvas-body .list-group')
+let counter = document.querySelector('.offcanvas .offcanvas-body .badge');
+let totalPrice = document.querySelector('.cart .cart-total');
+let totalPrice2 = document.querySelector('.offcanvas .offcanvas-body .list-group strong');
 
 async function getProducts() {
     let res = await fetch('js/products.json');
@@ -82,10 +85,14 @@ let displayProducts = (() => {
 let renderCart = () => {
   // Clear previous cart items
   cartSection.innerHTML = '';
+  let count = 0;
+  let total = 0;
   // Get latest cart from localStorage
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   cart.forEach(item => {
     let { price, name, qty } = item;
+    count += qty;
+    total += price*qty;
     let li = document.createElement('li');
     li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'lh-sm');
     li.innerHTML = `
@@ -97,6 +104,19 @@ let renderCart = () => {
     `;
     cartSection.appendChild(li);
   });
+
+  //adding the total price inside cart
+  let li = document.createElement('li');
+  li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'lh-sm');
+  li.innerHTML = `
+    <span>Total (USD)</span>
+    <strong>$${total}</strong>
+  `
+  cartSection.appendChild(li);
+
+  counter.textContent = count;
+  totalPrice.textContent = `$${total}`;
+  if (totalPrice2) totalPrice2.textContent = `$${total}`;
 };
 
 getProducts();
