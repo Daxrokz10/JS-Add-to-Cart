@@ -140,19 +140,31 @@ let renderCart = () => {
   // Get latest cart from localStorage
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   cart.forEach(item => {
-    let { price, name, qty } = item;
+    let { id, price, name, qty } = item;
     count += qty;
     total += price*qty;
     let li = document.createElement('li');
-    li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'lh-sm');
+    li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'lh-sm', 'align-items-center');
     li.innerHTML = `
       <div>
         <h6 class="my-0">${name} <span class="badge bg-secondary">${qty}</span></h6>
         <small class="text-body-secondary">x${qty}</small>
       </div>
       <span class="text-body-secondary">$${(price * qty).toFixed(2)}</span>
+      <button class="btn btn-sm btn-outline-danger ms-2 remove-cart-item" data-id="${id}" title="Remove"><svg width="16" height="16"><use xlink:href="#trash"></use></svg></button>
     `;
     cartSection.appendChild(li);
+  });
+
+  // Add event listeners for remove buttons
+  cartSection.querySelectorAll('.remove-cart-item').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const prodId = parseInt(this.getAttribute('data-id'));
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart = cart.filter(item => item.id !== prodId);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart();
+    });
   });
 
   //adding the total price inside cart
